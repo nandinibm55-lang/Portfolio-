@@ -252,7 +252,7 @@
 
     <section id="hero">
         <div class="container hero-content">
-            <img src="profile.jpeg" alt="Nandini B M" class="profile-img" onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex';">
+            <img src="profile.jpg" alt="Nandini B M" class="profile-img" onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex';">
             <div id="avatar-fallback" class="profile-img" style="display:none;">NBM</div>
             
             <h2>Nandini B M</h2>
