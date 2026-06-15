@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nandini B M | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #2563eb;
+        }
+
+        #hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #cbd5e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #64748b;
+            font-weight: bold;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        #hero h1 {
+            font-size: 42px;
+            color: #1e3a8a;
+        }
+
+        #hero h2 {
+            font-size: 20px;
+            color: #2563eb;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        #hero p {
+            max-width: 600px;
+            font-size: 16px;
+            color: #475569;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: #1e3a8a;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: #2563eb;
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .education-list, .hobby-list {
+            list-style: none;
+        }
+        
+        .education-list li, .hobby-list li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .education-list li::before, .hobby-list li::before {
+            content: "•";
+            color: #2563eb;
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: -4px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        .contact-info p {
+            margin: 10px 0;
+        }
+        
+        .contact-info a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+            #hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Nandini B M</div>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container hero-content">
+            <img src="profile.jpeg" alt="Nandini B M" class="profile-img" onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex';">
+            <div id="avatar-fallback" class="profile-img" style="display:none;">NBM</div>
+            
+            <h2>Nandini B M</h2>
+            <h1>Computer Science Student</h1>
+            <p>Hello, I am Nandini B M from Bangalore. I completed my PUC in Chikkaballapur, and I am currently pursuing my B. Tech in Artificial Intelligence and Data Science.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <h2 class="section-title" style="text-align: left; justify-content: flex-start;">Education</h2>
+                    <ul class="education-list">
+                        <li>
+                            <strong>B. Tech in Artificial Intelligence and Data Science</strong><br>
+                            Reva University, Bangalore (560064)<br>
+                            <em>Current Status: 2nd Semester</em>
+                        </li>
+                        <li>
+                            <strong>Pre-University College (PUC)</strong><br>
+                            B G S PU College, Chikkaballapur
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="section-title" style="text-align: left; justify-content: flex-start;">Hobbies</h2>
+                    <ul class="hobby-list">
+                        <li>Gym & Fitness</li>
+                        <li>Watching Cricket</li>
+                        <li>Playing Badminton</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="background-color: #f1f5f9;">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">C Programming</span>
+                <span class="skill-tag">Advanced C</span>
+                <span class="skill-tag">Communication</span>
+                <span class="skill-tag">Team Work</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>2D Graphics Editor</h3>
+                    <p>A menu-driven graphics editor developed in C, showcasing core programming concepts and structured menu navigation logic.</p>
+                </div>
+                <div class="card">
+                    <h3>Smart Farming and Crop Monitoring</h3>
+                    <p>An innovative conceptual project focused on utilizing technology for efficient agricultural practices and predictive crop management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" style="background-color: #f1f5f9;">
+        <div class="container">
+            <h2 class="section-title">Achievements & Certifications</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>IBM Skilled Online</h3>
+                    <p>Completed online course certification focusing on modern technology workflows.</p>
+                </div>
+                <div class="card">
+                    <h3>Instagram Design System</h3>
+                    <p>Completed a specialized online course exploring modern user interface design frameworks.</p>
+                </div>
+                <div class="card">
+                    <h3>Wadhwani Foundation</h3>
+                    <p>Earned certification in professional development skills and foundational training.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:nandinibm55@gmail.com">nandinibm55@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+919611920970">+91 9611920970</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Nandini B M. All Rights Reserved for Assignment Submission.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
